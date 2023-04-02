@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'package:todo_app/views/settings.dart';
 import 'views/home.dart';
 import 'views/welcome_screen.dart';
@@ -10,6 +12,11 @@ import 'views/about.dart';
 import 'views/git.dart';
 
 Future main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
@@ -44,3 +51,4 @@ class ToDoApp extends StatelessWidget {
     );
   }
 }
+

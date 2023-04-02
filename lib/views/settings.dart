@@ -27,7 +27,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    if ((Platform.isAndroid)) {
+    if ((true)) {
       return MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
